@@ -6,6 +6,25 @@ package sdp.prac2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class AppTest {
-    
+
+        @Test void Task3() {
+        // Arrange
+        App classBeingTested = new App();
+        String data = "((())()(())()()()))(";
+        boolean expected = false;
+        // test 2
+        String data2 = "()()";
+        boolean expected2 = true;
+        // Act
+        boolean result = classBeingTested.Task3(data);
+        boolean result2 = classBeingTested.Task3(data2);
+        // Assert
+        assertEquals(expected,result);
+        assertEquals(expected2,result2);
+    }
 }
