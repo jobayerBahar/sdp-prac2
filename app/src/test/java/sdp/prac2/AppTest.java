@@ -27,6 +27,22 @@ class AppTest {
         assertEquals(expect1, sf.Task2(check1));
         assertEquals(expect2, sf.Task2(check2));
 
-        
+    }
+
+
+        @Test void Task3() {
+        // Arrange
+        App classBeingTested = new App();
+        String data = "((())()(())()()()))(";
+        boolean expected = false;
+        // test 2
+        String data2 = "()()";
+        boolean expected2 = true;
+        // Act
+        boolean result = classBeingTested.Task3(data);
+        boolean result2 = classBeingTested.Task3(data2);
+        // Assert
+        assertEquals(expected,result);
+        assertEquals(expected2,result2);
     }
 }
