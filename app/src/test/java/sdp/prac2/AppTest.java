@@ -6,7 +6,7 @@ package sdp.prac2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.List;
+import java.util.*;
 
 class AppTest {
     @Test void testTask2(){
@@ -30,9 +30,9 @@ class AppTest {
     }
 
 
-        @Test void Task3() {
+        @Test void TestTask3() {// renamed this to TestTask3, not avoid naming conflicts
         // Arrange
-        App classBeingTested = new App();
+        SimpleFunctions classBeingTested = new SimpleFunctions(); // Task3 method was not found because this was initially App(), instead of SimpleFunctions()
         String data = "((())()(())()()()))(";
         boolean expected = false;
         // test 2
@@ -44,5 +44,13 @@ class AppTest {
         // Assert
         assertEquals(expected,result);
         assertEquals(expected2,result2);
+    }
+
+    @Test void TestTask4() {
+        // Arrange
+        SimpleFunctions classBeingTested = new SimpleFunctions();
+        // Assert
+        assertIterableEquals(Arrays.asList(14,25, 6,24), classBeingTested.Task4(Arrays.asList(2,5,3,6), Arrays.asList(4,2,5,7))); // Test if the lists have the same length
+        assertIterableEquals(null, classBeingTested.Task4(Arrays.asList(2,5,3), Arrays.asList(4,2,5,7))); // Test if the lists do not have the same length
     }
 }

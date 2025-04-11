@@ -31,4 +31,24 @@ public class SimpleFunctions {
         return result;
     }
 
+    //Task 3 Thato
+
+    public boolean Task3(String str){
+        Stack<Character> stack = new Stack<>(); // using a stack data structure
+
+        char characterArray[] = str.toCharArray(); // converting the string into an array of characters
+
+        for(int i = 0; i < characterArray.length; i++){
+            if(characterArray[i] == '('){ // check if the character at index i is '('
+                stack.push('(');// if that's true then push that character into the stack
+            }else if (characterArray[i] == ')'){
+                if(stack.isEmpty()){ // if the stack is empty, I cannot pop anything, so just return false. to avoind the empty stack exception
+                    return false;
+                }
+                stack.pop();  
+            }
+        }
+
+        return stack.isEmpty();
+    }
 }
