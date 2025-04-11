@@ -49,8 +49,23 @@ class AppTest {
     @Test void TestTask4() {
         // Arrange
         SimpleFunctions classBeingTested = new SimpleFunctions();
+
+        //same length
+        List<Integer> fl1 = Arrays.asList(2,5,3,6);
+        List<Integer> fl2 = Arrays.asList(4,2,5,7);
+        
+        //diff length
+        List<Integer> sl1 = Arrays.asList(2,5,3,6);
+        List<Integer> sl2 = Arrays.asList(4,2,5);
+        
+
+        //Act
+        List<Integer> result = Arrays.asList(14,25, 6,24);
+        List<Integer> result2 = null;
+        
+        
         // Assert
-        assertIterableEquals(Arrays.asList(14,25, 6,24), classBeingTested.Task4(Arrays.asList(2,5,3,6), Arrays.asList(4,2,5,7))); // Test if the lists have the same length
-        assertIterableEquals(null, classBeingTested.Task4(Arrays.asList(2,5,3), Arrays.asList(4,2,5,7))); // Test if the lists do not have the same length
+        assertIterableEquals(result, classBeingTested.Task4(fl1,fl2)); // Test if the lists have the same length
+        assertIterableEquals(result2, classBeingTested.Task4(sl1,sl2)); // Test if the lists do not have the same length
     }
 }
