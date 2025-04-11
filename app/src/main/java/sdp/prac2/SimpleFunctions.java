@@ -24,7 +24,7 @@ public class SimpleFunctions {
         for (int i = 0; i < nested.size(); i++) {
             if (nested.get(i).toString().length() != 0) {
                 String item = nested.get(i).toString();
-                item = item.substring(1, item.length() - 1);
+                item = item.substring(1, item.length());
                 result.add(item);
             }
         }
