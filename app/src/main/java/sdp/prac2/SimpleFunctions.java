@@ -31,4 +31,21 @@ public class SimpleFunctions {
         return result;
     }
 
+    //Task 3 Thato
+
+    public boolean Task3(String str){
+        Stack<Character> stack = new Stack<>();
+
+        char characterArray[] = str.toCharArray();
+
+        for(int i = 0; i < characterArray.length; i++){
+            if(characterArray[i] == '('){
+                stack.push('(');
+            }else{
+                stack.pop();
+            }
+        }
+
+        return stack.isEmpty();
+    }
 }
