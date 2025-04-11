@@ -42,7 +42,7 @@ public class SimpleFunctions {
             if(characterArray[i] == '('){ // check if the character at index i is '('
                 stack.push('(');// if that's true then push that character into the stack
             }else if (characterArray[i] == ')'){
-                if(stack.isEmpty()){
+                if(stack.isEmpty()){ // if the stack is empty, I cannot pop anything, so just return false. to avoind the empty stack exception
                     return false;
                 }
                 stack.pop();  

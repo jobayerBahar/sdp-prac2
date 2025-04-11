@@ -45,4 +45,12 @@ class AppTest {
         assertEquals(expected,result);
         assertEquals(expected2,result2);
     }
+
+    @Test void TestTask4() {
+        // Arrange
+        SimpleFunctions classBeingTested = new SimpleFunctions();
+        // Assert
+        assertIterableEquals(Arrays.asList(14,25, 6,24), classBeingTested.Task4(Arrays.asList(2,5,3,6), Arrays.asList(4,2,5,7))); // Test if the lists have the same length
+        assertIterableEquals(null, classBeingTested.Task4(Arrays.asList(2,5,3), Arrays.asList(4,2,5,7))); // Test if the lists do not have the same length
+    }
 }
