@@ -34,15 +34,18 @@ public class SimpleFunctions {
     //Task 3 Thato
 
     public boolean Task3(String str){
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>(); // using a stack data structure
 
-        char characterArray[] = str.toCharArray();
+        char characterArray[] = str.toCharArray(); // converting the string into an array of characters
 
         for(int i = 0; i < characterArray.length; i++){
-            if(characterArray[i] == '('){
-                stack.push('(');
-            }else{
-                stack.pop();
+            if(characterArray[i] == '('){ // check if the character at index i is '('
+                stack.push('(');// if that's true then push that character into the stack
+            }else if (characterArray[i] == ')'){
+                if(stack.isEmpty()){
+                    return false;
+                }
+                stack.pop();  
             }
         }
 

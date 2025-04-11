@@ -30,9 +30,9 @@ class AppTest {
     }
 
 
-        @Test void Task3() {
+        @Test void TestTask3() {// renamed this to TestTask3, not avoid naming conflicts
         // Arrange
-        App classBeingTested = new App();
+        SimpleFunctions classBeingTested = new SimpleFunctions(); // Task3 method was not found because this was initially App(), instead of SimpleFunctions()
         String data = "((())()(())()()()))(";
         boolean expected = false;
         // test 2
