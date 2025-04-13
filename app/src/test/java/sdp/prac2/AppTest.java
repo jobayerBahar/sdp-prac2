@@ -9,7 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
 class AppTest {
-    @Test void testTask2(){
+    @Test void TestTask2(){
+        // Arrange
         SimpleFunctions sf = new SimpleFunctions();
         List<String> check1 = new ArrayList<String>();
         check1.add("biscuit");
@@ -18,12 +19,14 @@ class AppTest {
         check2.add("");
         check2.add("biscuit");
 
+        // Act
         List<String> expect1 = new ArrayList<String>();
         expect1.add("iscuit");
         expect1.add("ookies");
         List<String> expect2 = new ArrayList<String>();
         expect2.add("iscuit");
 
+        // Assert
         assertEquals(expect1, sf.Task2(check1));
         assertEquals(expect2, sf.Task2(check2));
 
