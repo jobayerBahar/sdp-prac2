@@ -53,8 +53,6 @@ public class SimpleFunctions {
     }
 
 
-
-
     //Task 6 Hazel
      public static List<Integer> Task6(List<Integer> numbers) {
         List<Integer> roundedNumbers = new ArrayList<>();
