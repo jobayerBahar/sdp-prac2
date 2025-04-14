@@ -51,4 +51,23 @@ public class SimpleFunctions {
 
         return stack.isEmpty();
     }
+
+
+
+
+    //Task 6 Hazel
+     public static List<Integer> Task6(List<Integer> numbers) {
+        List<Integer> roundedNumbers = new ArrayList<>();
+       
+        for (int number : numbers) {
+            if (number % 100 == 0) {
+                roundedNumbers.add(number);
+            } else {
+                int nextMultiple = ((number / 100) + 1) * 100;
+                roundedNumbers.add(nextMultiple);
+            }
+        }
+       
+        return roundedNumbers;
+    }
 }
