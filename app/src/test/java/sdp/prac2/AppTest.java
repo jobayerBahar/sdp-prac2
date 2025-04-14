@@ -9,6 +9,20 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
 class AppTest {
+
+    @Test void TestTask1() {
+        SimpleFunctions sf = new SimpleFunctions();
+          // Arrange
+        List<Integer> a = List.of(5, 15, 25);
+        List<Integer> b = List.of(1, -1, 3, 0);
+
+        // Act
+        int result = sf.Task1(a, b);
+
+        // Assert
+        assertEquals(20, result);  // 15 + 5 = 20
+    }
+
     @Test void TestTask2(){
         // Arrange
         SimpleFunctions sf = new SimpleFunctions();
