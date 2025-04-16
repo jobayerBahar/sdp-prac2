@@ -52,6 +52,23 @@ public class SimpleFunctions {
         return stack.isEmpty();
     }
 
+    //Task 4 Calvin
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
+        if (a.size() != b.size()) {
+            return null;
+        }
+
+        List<Integer> result = new ArrayList<>();
+        int n = a.size();
+
+        for (int i = 0; i < n; i++) {
+            result.add(a.get(i) * b.get(n - 1 - i));
+        }
+
+        return result;
+    }
+
+
 
     //Task 6 Hazel
      public static List<Integer> Task6(List<Integer> numbers) {

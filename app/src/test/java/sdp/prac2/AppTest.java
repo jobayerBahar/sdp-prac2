@@ -85,4 +85,23 @@ class AppTest {
         assertIterableEquals(result, classBeingTested.Task4(fl1,fl2)); // Test if the lists have the same length
         assertIterableEquals(result2, classBeingTested.Task4(sl1,sl2)); // Test if the lists do not have the same length
     }
+
+    
+    @Test void TestTask5() {
+    // Arrange
+    List<Integer> sortedList = Arrays.asList(1, 2, 3, 4, 5);
+    List<Integer> unsortedList = Arrays.asList(1, 3, 2, 4, 5);
+    List<Integer> descendingList = Arrays.asList(5, 4, 3, 2, 1);
+    List<Integer> singleElementList = Arrays.asList(42);
+    List<Integer> emptyList = new ArrayList<>();
+
+    // Act & Assert
+    assertTrue(SimpleFunctions.Task5(sortedList), "Should return true for sorted list");
+    assertFalse(SimpleFunctions.Task5(unsortedList), "Should return false for unsorted list");
+    assertFalse(SimpleFunctions.Task5(descendingList), "Should return false for descending list");
+    assertTrue(SimpleFunctions.Task5(singleElementList), "Should return true for single-element list");
+    assertTrue(SimpleFunctions.Task5(emptyList), "Should return true for empty list");
+    }   
+
+    
 }
